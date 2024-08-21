@@ -1,0 +1,1 @@
+<img src="{{asset('img/chaity_logo_text.png')}}" style="height: 80px;">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Modules\PhotoGallery\Models\PhotoGallery;
-use Modules\Product\Models\Product;
+
 
 class FrontendController extends Controller
 {
@@ -15,34 +15,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-
-        $data['products'] = Product::all();
-        return view('frontend.home', $data);
+        return view('frontend.index');
     }
-
-    public function boardOfDirectors()
-    {
-        return view('frontend.board_of_directories');
-    }
-
-
-    public function companyOverview()
-    {
-        return view('frontend.company_overview');
-    }
-
-
-    public function managementTeam()
-    {
-        return view('frontend.management_team');
-    }
-
-
-    public function sustainabilityPage()
-    {
-        return view('frontend.sustainability');
-    }
-
 
     public function productList()
     {
@@ -55,43 +29,10 @@ class FrontendController extends Controller
     }
 
 
-    public function garmentsPage()
-    {
-        return view('frontend.concerns.garments');
-    }
-
-    public function textilesPage()
-    {
-        return view('frontend.concerns.textiles');
-    }
-    public function spinningMill()
-    {
-        return view('frontend.concerns.spinning_mill');
-    }
-
-    public function Accessories()
-    {
-        return view('frontend.concerns.accessories');
-    }
-
-    public function restaurantPage()
-    {
-        return view('frontend.concerns.restaurant');
-    }
-
-    public function commercialDevelopment()
-    {
-        return view('frontend.concerns.devlopment');
-    }
     public function photoGallery()
     {
         $photos = PhotoGallery::all();
         return view('frontend.gallery.all_photos', ['photos' => $photos]);
-    }
-
-    public function certification()
-    {
-        return view('frontend.certification');
     }
 
 

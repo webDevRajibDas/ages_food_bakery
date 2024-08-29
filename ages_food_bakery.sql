@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 21, 2024 at 01:02 PM
+-- Generation Time: Aug 29, 2024 at 10:47 AM
 -- Server version: 8.3.0
 -- PHP Version: 8.2.18
 
@@ -396,6 +396,42 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint NOT NULL DEFAULT '1',
+  `type` tinyint NOT NULL DEFAULT '1',
+  `created_by` int UNSIGNED DEFAULT NULL,
+  `updated_by` int UNSIGNED DEFAULT NULL,
+  `deleted_by` int UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `image`, `status`, `type`, `created_by`, `updated_by`, `deleted_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'Polo', '/storage/media/10/GB0pngwan07A8ZAsBCjf0N2wF1c4RHSh1YRHUOdD.png', 1, 2, 1, 1, NULL, '2024-08-19 08:42:17', '2024-08-19 08:42:17', NULL),
+(3, 'T-Shirt', '/storage/media/11/SQe1Bxosl4117u5AltTlHWGKeTjfQDIdcGOkVAHZ.png', 1, 2, 1, 1, NULL, '2024-08-19 08:46:06', '2024-08-19 08:46:06', NULL),
+(4, 'Sweeter', '/storage/media/12/ZnY3LJ9U0LGHg7LsGrXG5pEWETKXlrAXEinsLHRz.png', 1, 2, 1, 1, NULL, '2024-08-19 12:13:29', '2024-08-19 12:13:30', NULL),
+(5, 'Test Line1', '/storage/media/14/JM1IHoTQ8SzWAztxvazlBXroLoNxQaUp4kNDMQaz.png', 1, 2, 1, 1, NULL, '2024-08-20 05:04:49', '2024-08-20 05:04:50', NULL),
+(6, 'Ladies Jeans', '/storage/media/15/0pO9v3u0brG2rUmXWY3BpdNMe7b7yau3w9RXmhjN.png', 1, 1, 1, 1, NULL, '2024-08-20 05:05:40', '2024-08-20 05:05:41', NULL),
+(7, 'T-Shirt', '/storage/media/22/HcRQED9fJVOD7BVITiHz2wan8jhLM1w9wsP9JDQk.png', 1, 2, 1, 1, NULL, '2024-08-21 12:30:32', '2024-08-21 12:30:33', NULL),
+(8, 'Us Polo', '/storage/media/23/h9mSvAqWe0la7NeP3Dso1gSjixOf8ZO9PgqN0BjR.png', 1, 2, 1, 1, NULL, '2024-08-21 12:31:07', '2024-08-21 12:31:07', NULL),
+(9, 'Genji', '/storage/media/24/sk1Hil4pp1uGwAvkj8jdg25LsGVmrn8IzEr60ojl.png', 1, 1, 1, 1, NULL, '2024-08-21 12:31:51', '2024-08-21 12:31:51', NULL);
 
 -- --------------------------------------------------------
 
